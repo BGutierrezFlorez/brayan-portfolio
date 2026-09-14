@@ -9,6 +9,7 @@ const links = [
   ["Mi stack", "skills"],
   ["Proyectos", "proyectos"],
   ["Experiencia", "experiencia"],
+  ["Certificaciones", "certificaciones"],
   ["Contacto", "contacto"],
 ];
 

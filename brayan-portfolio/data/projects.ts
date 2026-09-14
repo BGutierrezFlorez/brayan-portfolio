@@ -14,7 +14,7 @@ export const projects: Project[] = [
     solution: "Información pendiente de completar.",
     githubUrl: "",
     demoUrl: "",
-    image: "",
+    image: "/publigana.png",
     architecture: "Información pendiente de completar.",
   },
   {
