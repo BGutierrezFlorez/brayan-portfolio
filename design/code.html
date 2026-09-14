@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>[MI NOMBRE] — Full Stack Developer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,400,0..1,0" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #0B0D13;
+        color: #E2E8F0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    }
+    ::selection {
+      background-color: rgba(56, 189, 248, 0.25);
+      color: #38bdf8;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+            },
+            canvas: {
+              base: '#0B0D13',
+              surface: '#11141E',
+              card: '#161A26',
+              muted: '#1E2333',
+              border: '#22283A'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Geist', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-canvas-base text-slate-200 antialiased selection:bg-brand-400/20 selection:text-brand-400">
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0B0D13]/80 backdrop-blur-md border-b border-canvas-border/70 transition-all">
+<div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+<a class="group flex items-center gap-2 text-base font-bold tracking-tight text-white hover:text-brand-400 transition-colors" href="#">
+<span>[MI NOMBRE]</span>
+<span class="w-1.5 h-1.5 rounded-full bg-brand-400 group-hover:scale-125 transition-transform"></span>
+</a>
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+<a class="hover:text-white transition-colors duration-150" href="#sobre-mi">Sobre mí</a>
+<a class="hover:text-white transition-colors duration-150" href="#skills">Mi stack</a>
+<a class="hover:text-white transition-colors duration-150" href="#proyectos">Proyectos</a>
+<a class="hover:text-white transition-colors duration-150" href="#experiencia">Experiencia</a>
+<a class="hover:text-white transition-colors duration-150" href="#contacto">Contacto</a>
+</nav>
+<div class="flex items-center">
+<a class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 bg-canvas-card hover:bg-canvas-muted border border-canvas-border hover:border-brand-400/40 rounded-lg transition-all duration-200 shadow-sm" href="#">
+<span>Descargar CV</span>
+<span class="material-symbols-outlined text-[16px] text-brand-400">download</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-16">
+<!-- ================= HERO ASIMÉTRICO Y VISUAL ================= -->
+<section class="relative overflow-hidden pt-16 pb-24 md:py-28 border-b border-canvas-border/50">
+<!-- Gradient radial glow accents -->
+<div class="absolute -top-40 right-10 w-[500px] h-[500px] bg-brand-400/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 left-0 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+<!-- Columna Izquierda: Editorial y directos -->
+<div class="lg:col-span-6 flex flex-col items-start">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-canvas-surface border border-canvas-border text-xs font-mono font-medium text-brand-400 mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse"></span>
+<span>FULL STACK DEVELOPER</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-[54px] font-bold text-white tracking-tight leading-[1.12] mb-6">
+              Desarrollo software para resolver problemas <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-sky-200">reales</span>.
+            </h1>
+<p class="text-lg text-slate-400 leading-relaxed max-w-xl mb-8">
+              Desarrollador Full Stack con enfoque en <span class="text-slate-200 font-medium">Java, Spring Boot, JavaScript, React, Next.js</span> y <span class="text-slate-200 font-medium">PostgreSQL</span>.
+            </p>
+<div class="flex flex-wrap items-center gap-4 mb-8">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-400 text-canvas-base font-semibold text-sm hover:bg-brand-500 hover:shadow-lg hover:shadow-brand-400/20 transition-all duration-200" href="#proyectos">
+<span>Ver proyectos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-canvas-surface hover:bg-canvas-card border border-canvas-border hover:border-slate-600 text-slate-300 hover:text-white font-medium text-sm transition-all duration-200" href="#">
+<span>Descargar CV</span>
+<span class="material-symbols-outlined text-[18px] text-slate-400">download</span>
+</a>
+</div>
+<div class="flex items-center gap-6 text-sm font-medium text-slate-400">
+<a class="hover:text-brand-400 transition-colors inline-flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+                GitHub <span class="text-xs">↗</span>
+</a>
+<span class="text-slate-700">/</span>
+<a class="hover:text-brand-400 transition-colors inline-flex items-center gap-1" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+                LinkedIn <span class="text-xs">↗</span>
+</a>
+</div>
+</div>
+<!-- Columna Derecha: UI Abstracta y Moderna de Software -->
+<div class="lg:col-span-6 w-full">
+<div class="relative mx-auto w-full max-w-lg">
+<!-- Window Mockup Frame -->
+<div class="rounded-2xl bg-canvas-surface/90 border border-canvas-border p-5 shadow-2xl backdrop-blur-xl relative z-10">
+<!-- Window Header -->
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-canvas-border/80">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-red-500/60"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+<div class="w-3 h-3 rounded-full bg-emerald-500/60"></div>
+</div>
+<div class="px-3 py-0.5 rounded-full bg-canvas-muted text-slate-400 font-mono text-[11px] tracking-wide">
+                    app.architecture.config
+                  </div>
+<div class="w-12"></div>
+</div>
+<!-- Interactive Architecture Flow Preview -->
+<div class="space-y-3">
+<!-- Frontend layer card -->
+<div class="p-3.5 rounded-xl bg-canvas-card border border-canvas-border flex items-center justify-between group hover:border-brand-400/40 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-sky-500/10 flex items-center justify-center text-brand-400">
+<span class="material-symbols-outlined text-[20px]">web</span>
+</div>
+<div>
+<div class="text-xs font-semibold text-white">Client Interface</div>
+<div class="text-[11px] text-slate-400">React · Next.js · TypeScript</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Reactive UI</span>
+</div>
+<!-- Flow connector -->
+<div class="flex justify-center -my-1">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-canvas-muted border border-canvas-border/80 text-[10px] font-mono text-slate-400">
+<span class="material-symbols-outlined text-[13px] text-brand-400">sync_alt</span>
+<span>JSON REST APIs / Type-safe</span>
+</div>
+</div>
+<!-- Backend layer card -->
+<div class="p-3.5 rounded-xl bg-canvas-card border border-canvas-border flex items-center justify-between group hover:border-brand-400/40 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
+<span class="material-symbols-outlined text-[20px]">dns</span>
+</div>
+<div>
+<div class="text-xs font-semibold text-white">Application Core</div>
+<div class="text-[11px] text-slate-400">Java 21 · Spring Boot 3</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20">Clean Service</span>
+</div>
+<!-- Flow connector -->
+<div class="flex justify-center -my-1">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-canvas-muted border border-canvas-border/80 text-[10px] font-mono text-slate-400">
+<span class="material-symbols-outlined text-[13px] text-brand-400">arrow_downward</span>
+<span>JPA / Hibernate ORM</span>
+</div>
+</div>
+<!-- Database layer card -->
+<div class="p-3.5 rounded-xl bg-canvas-card border border-canvas-border flex items-center justify-between group hover:border-brand-400/40 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div>
+<div class="text-xs font-semibold text-white">Persistence &amp; Storage</div>
+<div class="text-[11px] text-slate-400">PostgreSQL Relational DB</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20">ACID Model</span>
+</div>
+</div>
+<!-- Footer Status Bar -->
+<div class="mt-4 pt-3 border-t border-canvas-border/80 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    Build Passing
+                  </span>
+<span class="text-brand-400">Full Stack Pipeline</span>
+</div>
+</div>
+<!-- Decorative floating badge -->
+<div class="absolute -bottom-4 -right-4 bg-canvas-card/95 border border-canvas-border px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-3 z-20 backdrop-blur-md">
+<div class="w-8 h-8 rounded-lg bg-brand-400/15 flex items-center justify-center text-brand-400">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<div class="text-xs font-semibold text-white">Full Stack Focus</div>
+<div class="text-[10px] text-slate-400">End-to-End Solutions</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECCIÓN: SOBRE MÍ ================= -->
+<section class="py-24 border-b border-canvas-border/50" id="sobre-mi">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
+<div class="lg:col-span-4">
+<span class="text-xs font-mono font-medium text-brand-400 tracking-wider uppercase block mb-3">01 / Perfil</span>
+<h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
+              Sobre mí
+            </h2>
+</div>
+<div class="lg:col-span-8 space-y-5 text-base sm:text-lg text-slate-300 leading-relaxed">
+<p>
+              Soy desarrollador de software enfocado en construir aplicaciones web y soluciones Full Stack.
+            </p>
+<p>
+              Me interesa especialmente el desarrollo backend con <span class="text-white font-medium">Java</span> y <span class="text-white font-medium">Spring Boot</span>, además de la creación de interfaces modernas utilizando <span class="text-white font-medium">React, TypeScript</span> y <span class="text-white font-medium">Next.js</span>.
+            </p>
+<p>
+              Disfruto aprender nuevas tecnologías, resolver problemas y convertir ideas en aplicaciones funcionales.
+            </p>
+</div>
+</div>
+<!-- 3 Conceptos visuales limpios en columnas -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-canvas-border/40">
+<div class="space-y-3">
+<div class="w-10 h-10 rounded-xl bg-canvas-card border border-canvas-border flex items-center justify-center text-brand-400">
+<span class="material-symbols-outlined text-[22px]">laptop_mac</span>
+</div>
+<h3 class="text-lg font-bold text-white">Frontend</h3>
+<p class="text-sm text-slate-400 leading-relaxed">
+              Interfaces reactivas, diseño responsive y experiencia de usuario fluida con React y Next.js.
+            </p>
+</div>
+<div class="space-y-3">
+<div class="w-10 h-10 rounded-xl bg-canvas-card border border-canvas-border flex items-center justify-center text-brand-400">
+<span class="material-symbols-outlined text-[22px]">terminal</span>
+</div>
+<h3 class="text-lg font-bold text-white">Backend</h3>
+<p class="text-sm text-slate-400 leading-relaxed">
+              APIs REST robustas, arquitectura en capas y lógica empresarial con Java y Spring Boot.
+            </p>
+</div>
+<div class="space-y-3">
+<div class="w-10 h-10 rounded-xl bg-canvas-card border border-canvas-border flex items-center justify-center text-brand-400">
+<span class="material-symbols-outlined text-[22px]">database</span>
+</div>
+<h3 class="text-lg font-bold text-white">Database</h3>
+<p class="text-sm text-slate-400 leading-relaxed">
+              Modelado relacional, integridad transaccional y consultas eficientes en PostgreSQL.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECCIÓN: MI STACK ================= -->
+<section class="py-24 border-b border-canvas-border/50 bg-canvas-surface/40" id="skills">
+<div class="max-w-6xl mx-auto px-6">
+<div class="max-w-xl mb-14">
+<span class="text-xs font-mono font-medium text-brand-400 tracking-wider uppercase block mb-3">02 / Tecnologías</span>
+<h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Mi stack</h2>
+</div>
+<!-- Tecnologías Principales (Tarjetas destacadas con logos/iconos SVG claros) -->
+<div class="mb-12">
+<h3 class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6">Tecnologías Principales</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+<!-- Java -->
+<div class="p-4 rounded-xl bg-canvas-card border border-canvas-border hover:border-brand-400/40 transition-all duration-200 flex items-center gap-3.5 group">
+<div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400 shrink-0">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M8.86 19.37c-.12.04-.23.08-.35.12-1.92.65-3.08 1.4-3.08 2.26 0 1.62 4.14 2.25 6.57 2.25 2.43 0 6.57-.63 6.57-2.25 0-.86-1.16-1.61-3.08-2.26-.12-.04-.23-.08-.35-.12.92.51 1.43 1.05 1.43 1.63 0 1.38-3.09 1.75-4.57 1.75s-4.57-.37-4.57-1.75c0-.58.51-1.12 1.43-1.63zm3.14-5.37c2.32 0 4.11-.84 4.11-2.12 0-.8-.71-1.46-1.85-1.84.45.31.7.67.7 1.09 0 1.05-1.57 1.62-2.96 1.62s-2.96-.57-2.96-1.62c0-.42.25-.78.7-1.09-1.14.38-1.85 1.04-1.85 1.84 0 1.28 1.79 2.12 4.11 2.12zm0-4.5c1.43 0 2.58-.6 2.58-1.5 0-.58-.48-1.04-1.22-1.28.3.2.47.45.47.74 0 .69-1.03 1.04-1.83 1.04s-1.83-.35-1.83-1.04c0-.29.17-.54.47-.74-.74.24-1.22.7-1.22 1.28 0 .9 1.15 1.5 2.58 1.5z"></path>
+</svg>
+</div>
+<div>
+<div class="font-semibold text-white group-hover:text-brand-400 transition-colors text-sm">Java</div>
+<div class="text-[11px] text-slate-400">Backend Core</div>
+</div>
+</div>
+<!-- Spring Boot -->
+<div class="p-4 rounded-xl bg-canvas-card border border-canvas-border hover:border-brand-400/40 transition-all duration-200 flex items-center gap-3.5 group">
+<div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 shrink-0">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12c0 3.73 2.05 6.98 5.08 8.68l.42-.73C4.84 18.42 3 15.42 3 12 3 7.03 7.03 3 12 3s9 4.03 9 9c0 3.42-1.84 6.42-4.5 7.95l.42.73C19.95 18.98 22 15.73 22 12c0-5.52-4.48-10-10-10zm-1 5v7.2l4.8 2.8.8-1.3-4.1-2.4V7h-1.5z"></path>
+</svg>
+</div>
+<div>
+<div class="font-semibold text-white group-hover:text-brand-400 transition-colors text-sm">Spring Boot</div>
+<div class="text-[11px] text-slate-400">Framework REST</div>
+</div>
+</div>
+<!-- JavaScript -->
+<div class="p-4 rounded-xl bg-canvas-card border border-canvas-border hover:border-brand-400/40 transition-all duration-200 flex items-center gap-3.5 group">
+<div class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-400 shrink-0 font-mono font-bold text-sm">
+                JS
+              </div>
+<div>
+<div class="font-semibold text-white group-hover:text-brand-400 transition-colors text-sm">JavaScript</div>
+<div class="text-[11px] text-slate-400">Lenguaje Web</div>
+</div>
+</div>
+<!-- TypeScript -->
+<div class="p-4 rounded-xl bg-canvas-card border border-canvas-border hover:border-brand-400/40 transition-all duration-200 flex items-center gap-3.5 group">
+<div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 shrink-0 font-mono font-bold text-sm">
+                TS
+              </div>
+<div>
+<div class="font-semibold text-white group-hover:text-brand-400 transition-colors text-sm">TypeScript</div>
+<div class="text-[11px] text-slate-400">Tipado Seguro</div>
+</div>
+</div>
+<!-- React -->
+<div class="p-4 rounded-xl bg-canvas-card border border-canvas-border hover:border-brand-400/40 transition-all duration-200 flex items-center gap-3.5 group">
+<div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 9a3 3 0 100 6 3 3 0 000-6zm0-7C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+</svg>
+</div>
+<div>
+<div class="font-semibold text-white group-hover:text-brand-400 transition-colors text-sm">React</div>
+<div class="text-[11px] text-slate-400">Librería UI</div>
+</div>
+</div>
+<!-- Next.js -->
+<div class="p-4 rounded-xl bg-canvas-card border border-canvas-border hover:border-brand-400/40 transition-all duration-200 flex items-center gap-3.5 group">
+<div class="w-10 h-10 rounded-lg bg-slate-500/15 flex items-center justify-center text-white shrink-0 font-mono font-bold text-sm">
+                N
+              </div>
+<div>
+<div class="font-semibold text-white group-hover:text-brand-400 transition-colors text-sm">Next.js</div>
+<div class="text-[11px] text-slate-400">SSR &amp; Fullstack</div>
+</div>
+</div>
+<!-- PostgreSQL -->
+<div class="p-4 rounded-xl bg-canvas-card border border-canvas-border hover:border-brand-400/40 transition-all duration-200 flex items-center gap-3.5 group">
+<div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 shrink-0">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zm0 14c-3.87 0-6-1.5-6-2v-1.87c1.47.8 3.61 1.27 6 1.27s4.53-.47 6-1.27V17c0 .5-2.13 2-6 2z"></path>
+</svg>
+</div>
+<div>
+<div class="font-semibold text-white group-hover:text-brand-400 transition-colors text-sm">PostgreSQL</div>
+<div class="text-[11px] text-slate-400">Base de Datos</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Herramientas y Entorno -->
+<div>
+<h3 class="text-xs font-mono uppercase tracking-widest text-slate-400 mb-6">Herramientas &amp; Entorno</h3>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="p-3.5 rounded-xl bg-canvas-surface border border-canvas-border/70 hover:border-canvas-border flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">hub</span>
+<span class="text-sm font-medium text-slate-300">Node.js</span>
+</div>
+<div class="p-3.5 rounded-xl bg-canvas-surface border border-canvas-border/70 hover:border-canvas-border flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">deployed_code</span>
+<span class="text-sm font-medium text-slate-300">Docker</span>
+</div>
+<div class="p-3.5 rounded-xl bg-canvas-surface border border-canvas-border/70 hover:border-canvas-border flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">commit</span>
+<span class="text-sm font-medium text-slate-300">Git</span>
+</div>
+<div class="p-3.5 rounded-xl bg-canvas-surface border border-canvas-border/70 hover:border-canvas-border flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">terminal</span>
+<span class="text-sm font-medium text-slate-300">Linux</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= PROYECTOS DESTACADOS ================= -->
+<section class="py-24 border-b border-canvas-border/50" id="proyectos">
+<div class="max-w-6xl mx-auto px-6">
+<div class="max-w-xl mb-16">
+<span class="text-xs font-mono font-medium text-brand-400 tracking-wider uppercase block mb-3">03 / Proyectos</span>
+<h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Proyectos destacados</h2>
+</div>
+<!-- ================= PROYECTO 1: HERO (PUBLIGANA) ================= -->
+<article class="mb-24 rounded-2xl bg-canvas-surface border border-canvas-border overflow-hidden hover:border-brand-400/40 transition-all duration-300 shadow-xl group">
+<div class="p-6 sm:p-8 lg:p-10 border-b border-canvas-border/70 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="max-w-3xl">
+<span class="text-xs font-mono text-brand-400 uppercase tracking-widest block mb-2">01 / PROYECTO DESTACADO</span>
+<h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Publigana</h3>
+<p class="text-slate-400 text-base mt-2.5 leading-relaxed">
+                Plataforma web desarrollada para gestionar y presentar contenido digital mediante una interfaz moderna.
+              </p>
+<div class="flex flex-wrap items-center gap-2 mt-4">
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">React</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">TypeScript</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">Next.js</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">PostgreSQL</span>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-400 text-canvas-base text-xs font-bold hover:bg-brand-500 transition-colors" href="#">
+<span>Ver demo</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-canvas-card hover:bg-canvas-muted border border-canvas-border text-xs font-semibold text-slate-300 hover:text-white transition-colors" href="#">
+<span>Ver código</span>
+<span class="material-symbols-outlined text-[16px]">code</span>
+</a>
+</div>
+</div>
+<!-- Imagen HERO Panorámica Real (Con prioridad absoluta y sin números inventados) -->
+<div class="p-4 sm:p-6 lg:p-8 bg-[#0B0D13]/60">
+<div class="rounded-xl overflow-hidden border border-canvas-border/80 shadow-2xl bg-canvas-card">
+<img alt="Dashboard Publigana" class="w-full h-auto object-cover block group-hover:scale-[1.01] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1UOX9uOI2uz6twd7rM2IZhxxhz_qpN2tEfaW0uSafWbMHB4P_-ntQNAx9pfWjv5H1kfc_nr2EsSpdBSt0omV29djdWph8m9SI-Ocei0250461ClRglT4llswHeW0gU2U3DcCkzPVfmnSd2E9th0aKbQWxEbMxkl2mf0bGIa0dIGD-RJ1sRKMeH7D1R7LBhmg1jbJaBZXbw0-zaVaa05j4R4SK-_dInPPTQzc8yoqsf8Up6jcDz6f2EHvA"/>
+</div>
+</div>
+</article>
+<!-- ================= PROYECTO 2: Disposición Alternada (Info Izq, Visual Der) ================= -->
+<article class="mb-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<div class="lg:col-span-6 p-7 sm:p-8 rounded-2xl bg-canvas-surface border border-canvas-border flex flex-col justify-between hover:border-brand-400/40 transition-colors">
+<div>
+<span class="text-xs font-mono text-brand-400 uppercase tracking-widest block mb-2">02 / PROYECTO</span>
+<h3 class="text-2xl font-bold text-white mb-3">[Nombre del Proyecto / API REST]</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">
+                [Descripción del proyecto: desarrollo de servicios backend y endpoints estructurados con autenticación y persistencia de datos relacionales].
+              </p>
+<div class="flex flex-wrap items-center gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">Java</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">Spring Boot</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">PostgreSQL</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">Docker</span>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-canvas-border/60">
+<a class="text-xs font-semibold text-brand-400 hover:underline inline-flex items-center gap-1" href="#">
+                Ver repositorio ↗
+              </a>
+<span class="text-slate-700">·</span>
+<a class="text-xs font-semibold text-slate-400 hover:text-white inline-flex items-center gap-1" href="#">
+                Documentación ↗
+              </a>
+</div>
+</div>
+<!-- Mockup Visual Arquitectura REST limpia -->
+<div class="lg:col-span-6 rounded-2xl bg-canvas-surface border border-canvas-border p-6 flex flex-col justify-between font-mono">
+<div class="flex items-center justify-between pb-3 border-b border-canvas-border/70 text-xs text-slate-400">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                REST API Controller
+              </span>
+<span class="text-[11px] text-slate-500">Spring MVC Layer</span>
+</div>
+<div class="space-y-2.5 py-5 text-xs">
+<div class="p-3 rounded-lg bg-canvas-card border border-canvas-border flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-sky-500/10 text-brand-400 font-bold text-[11px]">GET</span>
+<span class="text-slate-200">/api/v1/resources</span>
+</div>
+<span class="text-slate-400 text-[11px]">JSON Response</span>
+</div>
+<div class="p-3 rounded-lg bg-canvas-card border border-canvas-border flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-bold text-[11px]">POST</span>
+<span class="text-slate-200">/api/v1/auth/login</span>
+</div>
+<span class="text-slate-400 text-[11px]">Auth Token</span>
+</div>
+<div class="p-3 rounded-lg bg-canvas-card border border-canvas-border flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 font-bold text-[11px]">PUT</span>
+<span class="text-slate-200">/api/v1/records/{id}</span>
+</div>
+<span class="text-slate-400 text-[11px]">Entity Updated</span>
+</div>
+</div>
+<div class="pt-3 border-t border-canvas-border/70 flex items-center justify-between text-[11px] text-slate-400">
+<span>Security &amp; Validations</span>
+<span class="text-brand-400">PostgreSQL Relational DB</span>
+</div>
+</div>
+</article>
+<!-- ================= PROYECTO 3: Disposición Alternada Inversa (Visual Izq, Info Der) ================= -->
+<article class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Mockup Visual Izquierda -->
+<div class="lg:col-span-6 rounded-2xl bg-canvas-surface border border-canvas-border p-6 flex flex-col justify-between order-2 lg:order-1 font-mono">
+<div class="flex items-center justify-between pb-3 border-b border-canvas-border/70 text-xs text-slate-400">
+<span>Frontend &amp; Backend Sync</span>
+<span class="text-brand-400 text-[11px]">Full Stack App</span>
+</div>
+<div class="py-6 flex flex-col items-center justify-center space-y-3">
+<div class="w-full max-w-sm p-3 rounded-lg bg-canvas-card border border-canvas-border flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-brand-400 text-[18px]">devices</span>
+<span class="text-xs text-slate-200">Cliente Web (React / Next.js)</span>
+</div>
+<span class="text-[10px] text-slate-400">SPA</span>
+</div>
+<div class="h-4 w-px bg-canvas-border"></div>
+<div class="w-full max-w-sm p-3 rounded-lg bg-canvas-card border border-brand-400/30 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-brand-400 text-[18px]">dns</span>
+<span class="text-xs text-slate-200">Backend Core (Spring Boot)</span>
+</div>
+<span class="text-[10px] text-brand-400">REST API</span>
+</div>
+<div class="h-4 w-px bg-canvas-border"></div>
+<div class="w-full max-w-sm p-3 rounded-lg bg-canvas-card border border-canvas-border flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-brand-400 text-[18px]">database</span>
+<span class="text-xs text-slate-200">PostgreSQL Database</span>
+</div>
+<span class="text-[10px] text-slate-400">Relational</span>
+</div>
+</div>
+<div class="pt-3 border-t border-canvas-border/70 text-[11px] text-slate-500 text-right">
+              Clean Architecture Pipeline
+            </div>
+</div>
+<!-- Info Derecha -->
+<div class="lg:col-span-6 p-7 sm:p-8 rounded-2xl bg-canvas-surface border border-canvas-border flex flex-col justify-between order-1 lg:order-2 hover:border-brand-400/40 transition-colors">
+<div>
+<span class="text-xs font-mono text-brand-400 uppercase tracking-widest block mb-2">03 / PROYECTO</span>
+<h3 class="text-2xl font-bold text-white mb-3">[Nombre de la Aplicación Full Stack]</h3>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">
+                [Descripción del proyecto: aplicación web desarrollada de extremo a extremo integrando vistas reactivas con gestión de base de datos relacional y servicios de backend].
+              </p>
+<div class="flex flex-wrap items-center gap-2 mb-8">
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">React</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">Next.js</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">Spring Boot</span>
+<span class="px-2.5 py-1 rounded-md bg-canvas-card border border-canvas-border text-xs text-slate-300 font-mono">PostgreSQL</span>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-canvas-border/60">
+<a class="text-xs font-semibold text-brand-400 hover:underline inline-flex items-center gap-1" href="#">
+                Ver demo ↗
+              </a>
+<span class="text-slate-700">·</span>
+<a class="text-xs font-semibold text-slate-400 hover:text-white inline-flex items-center gap-1" href="#">
+                Ver código ↗
+              </a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- ================= EXPERIENCIA ================= -->
+<section class="py-24 border-b border-canvas-border/50 bg-canvas-surface/30" id="experiencia">
+<div class="max-w-6xl mx-auto px-6">
+<div class="max-w-xl mb-14">
+<span class="text-xs font-mono font-medium text-brand-400 tracking-wider uppercase block mb-3">04 / Trayectoria</span>
+<h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Experiencia</h2>
+</div>
+<!-- Fila limpia y realista con separadores sutiles -->
+<div class="divide-y divide-canvas-border/60 border-y border-canvas-border/60">
+<!-- Rol 1 -->
+<div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline group hover:bg-canvas-card/40 px-4 -mx-4 rounded-xl transition-colors">
+<div class="md:col-span-3 text-sm font-mono text-brand-400">
+              [Periodo]
+            </div>
+<div class="md:col-span-4">
+<h3 class="text-base font-bold text-white">[Cargo]</h3>
+<div class="text-xs text-slate-400 mt-0.5">[Empresa]</div>
+</div>
+<div class="md:col-span-5 text-sm text-slate-300 leading-relaxed">
+              [Descripción de responsabilidades y tecnologías utilizadas en el rol].
+            </div>
+</div>
+<!-- Rol 2 -->
+<div class="py-8 grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline group hover:bg-canvas-card/40 px-4 -mx-4 rounded-xl transition-colors">
+<div class="md:col-span-3 text-sm font-mono text-slate-400">
+              [Periodo]
+            </div>
+<div class="md:col-span-4">
+<h3 class="text-base font-bold text-white">[Cargo]</h3>
+<div class="text-xs text-slate-400 mt-0.5">[Empresa]</div>
+</div>
+<div class="md:col-span-5 text-sm text-slate-300 leading-relaxed">
+              [Descripción de responsabilidades, desarrollo de software y colaboración técnica].
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= EDUCACIÓN ================= -->
+<section class="py-24 border-b border-canvas-border/50">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-4">
+<span class="text-xs font-mono font-medium text-brand-400 tracking-wider uppercase block mb-3">05 / Formación</span>
+<h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Educación</h2>
+</div>
+<div class="lg:col-span-8 space-y-8">
+<!-- Item 1 -->
+<div class="pb-6 border-b border-canvas-border/50">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1.5">
+<h3 class="text-base font-bold text-white">[Grado / Titulación en Informática o Ingeniería]</h3>
+<span class="text-xs font-mono text-brand-400 shrink-0">[Periodo]</span>
+</div>
+<p class="text-sm text-slate-400">
+                [Universidad o Institución Educativa]
+              </p>
+</div>
+<!-- Item 2 -->
+<div>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1.5">
+<h3 class="text-base font-bold text-white">[Cursos técnicos / Certificaciones]</h3>
+<span class="text-xs font-mono text-slate-400 shrink-0">[Periodo o Estado]</span>
+</div>
+<p class="text-sm text-slate-400">
+                [Plataforma o Academia de Especialización]
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECCIÓN FINAL: CONTACTO ================= -->
+<section class="relative py-28 overflow-hidden bg-canvas-base" id="contacto">
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[550px] h-[250px] bg-brand-400/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
+<span class="text-xs font-mono font-medium text-brand-400 tracking-wider uppercase mb-4 block">06 / Contacto</span>
+<h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-5">
+          ¿Hablamos?
+        </h2>
+<p class="text-slate-300 text-base sm:text-lg max-w-lg mb-10 leading-relaxed">
+          Estoy abierto a oportunidades laborales, proyectos y colaboraciones.
+        </p>
+<a class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-brand-400 text-canvas-base font-bold text-sm hover:bg-brand-500 hover:shadow-xl hover:shadow-brand-400/25 transition-all duration-200" href="mailto:contacto@ejemplo.com">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span>Contactarme</span>
+</a>
+<div class="mt-12 pt-8 border-t border-canvas-border/60 flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-slate-400">
+<a class="hover:text-brand-400 transition-colors" href="mailto:contacto@ejemplo.com">
+            contacto@ejemplo.com
+          </a>
+<span class="text-slate-700">·</span>
+<a class="hover:text-brand-400 transition-colors inline-flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+            GitHub ↗
+          </a>
+<span class="text-slate-700">·</span>
+<a class="hover:text-brand-400 transition-colors inline-flex items-center gap-1" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+            LinkedIn ↗
+          </a>
+</div>
+</div>
+</section>
+</main>
+<!-- ================= FOOTER ================= -->
+<footer class="w-full border-t border-canvas-border/60 bg-canvas-base">
+<div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+<div class="flex items-center gap-2">
+<span class="font-bold text-white">[MI NOMBRE]</span>
+<span class="text-slate-600">—</span>
+<span>Full Stack Developer</span>
+</div>
+<div class="flex items-center gap-5">
+<a class="hover:text-slate-200 transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">GitHub</a>
+<span class="text-slate-700">·</span>
+<a class="hover:text-slate-200 transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<span class="text-slate-700">·</span>
+<a class="hover:text-slate-200 transition-colors" href="mailto:contacto@ejemplo.com">Email</a>
+</div>
+<div class="font-mono text-slate-500">
+        © 2026
+      </div>
+</div>
+</footer>
+</body></html>
