@@ -12,8 +12,8 @@ export const experience: Experience[] = [
 ];
 
 export const profileLinks = {
-  github: "",
-  linkedin: "",
+  github: "https://github.com/BGutierrezFlorez",
+  linkedin: "https://www.linkedin.com/in/brayan-alfonso-gutierrez-florez-8288621ab/",
   cv: "",
-  email: "",
+  email: "bratciney@gmail.com",
 };
